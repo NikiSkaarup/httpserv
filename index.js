@@ -14,7 +14,7 @@ app.get('/:data', (req, res) => {
 app.post('/:data', (req, res) => {
   console.log('POST');
   console.log(`PARAMS: ${req.params['data']}`);
-  console.log(`BODY  : ${req.body}`);
+  console.log(`BODY  : ${JSON.stringify(req.body)}`);
   res.send('OK - POST');
 });
 
