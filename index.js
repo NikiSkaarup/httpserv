@@ -7,15 +7,13 @@ const PORT = 3000;
 app.get('/:data', (req, res) => {
   console.log('GET:');
   console.log(`PARAMS: ${req.params['data']}`);
-  console.log(`BODY  : ${req.body}`);
   res.send('OK - GET');
 });
 
 app.post('/:data', (req, res) => {
   console.log('POST');
   console.log(`PARAMS: ${req.params['data']}`);
-  console.log(`BODY  : ${req.body.hello}`);
-  console.log(`DATA  : ${req.data.hello}`);
+  console.log(`BODY  : ${JSON.stringify(req.body)}`);
   res.send('OK - POST');
 });
 
