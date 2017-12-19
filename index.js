@@ -15,6 +15,7 @@ app.post('/:data', (req, res) => {
   console.log('POST');
   console.log(`PARAMS: ${req.params['data']}`);
   console.log(`BODY  : ${req.body.hello}`);
+  console.log(`DATA  : ${req.data.hello}`);
   res.send('OK - POST');
 });
 
